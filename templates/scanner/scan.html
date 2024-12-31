@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Scanner</title>
+</head>
+<body>
+    <h1>IP Scanner</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if result %}
+        <h2>Alive IPs:</h2>
+        <ul>
+            {% for ip in result %}
+                <li>{{ ip }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
