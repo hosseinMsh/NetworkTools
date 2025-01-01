@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from scaner.forms.ip import IPRange
-from scaner.utils import scan_ip_range
+from scanner.forms.ip import IPRange
+from scanner.utils import scan_ip_range
 
 def scan_view(request):
     result = None

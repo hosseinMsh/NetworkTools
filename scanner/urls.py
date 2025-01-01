@@ -1,5 +1,5 @@
 from django.urls import path
-from scaner import views
+from scanner import views
 
 urlpatterns = [
     path('scan/', views.scan_view, name='scan'),
